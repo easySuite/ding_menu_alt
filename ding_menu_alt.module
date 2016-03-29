@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Ding menu alt module handler.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function ding_menu_alt_init() {
+  drupal_add_css(drupal_get_path('module', 'ding_menu_alt') . '/ding_menu_alt.css');
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function ding_menu_alt_theme_registry_alter(&$theme_registry) {
+  $theme_registry['menu_link']['theme path'] = drupal_get_path('module', 'ding_menu_alt');
+  $theme_registry['menu_link']['function'] = 'ding_menu_alt_theme_menu_link';
+}
+
+/**
+ * Callback function for rewriting main menu.
+ *
+ * @param array $vars
+ *   An array of menu settings.
+ *
+ * @return string
+ *   Returns themed link.
+ */
+function ding_menu_alt_theme_menu_link($vars) {
+  $element = $vars['element'];
+
+  // Render any sub-links/menus.
+  $sub_menu = '';
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+
+  // Add default class to a tag.
+  $element['#localized_options']['attributes']['class'] = array(
+    'menu-item',
+  );
+
+  // Make sure text string is treated as html by l function.
+  $element['#localized_options']['html'] = TRUE;
+
+  if (isset($element['#original_link']) && $element['#original_link']['menu_name'] == "main-menu" && isset($element['#localized_options']['attributes']['title'])) {
+    $desc = $element['#localized_options']['attributes']['title'];
+    $link = l($element['#title'], $element['#href'], $element['#localized_options']);
+    $link .= '<span class="link-description">' . $desc . '</span>';
+  }
+  else {
+    $link = l('<span>' . $element['#title'] . '</span>', $element['#href'], $element['#localized_options']);
+  }
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $link . $sub_menu . "</li>\n";
+}

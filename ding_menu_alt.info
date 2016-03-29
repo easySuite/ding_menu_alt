@@ -1,0 +1,5 @@
+name = Ding menu alter
+description = Allowing to display menu description text under menu item.
+core = 7.x
+package = Ding!
+files[] = ding_menu_alt.module

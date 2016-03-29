@@ -1,0 +1,16 @@
+ul.main-menu li {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: auto;
+}
+
+ul.main-menu li a {
+    padding-bottom: 0 !important;
+}
+
+ul.main-menu li span.link-description {
+    display: block;
+    font-size: small;
+    margin-bottom: 15px;
+}
