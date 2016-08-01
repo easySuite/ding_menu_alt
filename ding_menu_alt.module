@@ -5,13 +5,6 @@
  */
 
 /**
- * Implements hook_init().
- */
-function ding_menu_alt_init() {
-  drupal_add_css(drupal_get_path('module', 'ding_menu_alt') . '/ding_menu_alt.css');
-}
-
-/**
  * Implements hook_theme_registry_alter().
  */
 function ding_menu_alt_theme_registry_alter(&$theme_registry) {
