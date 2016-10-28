@@ -1,7 +1,7 @@
 name = Ding menu alter
 description = Allowing to display menu description text under menu item.
 core = 7.x
-package = easyDDB
+package = easyOPAC
 files[] = ding_menu_alt.module
 version = 7.x-2.5.0+easy
 stylesheets[all][] = ding_menu_alt.css
