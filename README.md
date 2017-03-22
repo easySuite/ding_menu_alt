@@ -1,3 +1,6 @@
+Ding menu alter
+==========
+
 # General info
 This module enable the possibility to display menu link description provided by core menu functionality,
 under Main menu items.
