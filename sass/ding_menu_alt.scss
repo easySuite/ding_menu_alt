@@ -40,10 +40,6 @@ ul.main-menu li a.menu-item {
   font-size: 110%;
   font-weight: bold;
   display: inline;
-
-  @include small() {
-    padding-bottom: 0;
-  }
 }
 
 ul.main-menu li span.link-description {
