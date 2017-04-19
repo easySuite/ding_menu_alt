@@ -20,8 +20,8 @@
 ul.main-menu li {
   display: inline-block;
   vertical-align: top;
-  width: 150px;
   height: auto;
+  padding-right: 10px;
 
   @include small-medium() {
     display: inline-block;
