@@ -1,0 +1,86 @@
+/**
+ * Mixins
+ *
+ * @author magnify
+ */
+/* Breakpoints
+   ========================================================================== */
+/* Media query
+   ========================================================================== */
+/* Breakpoints
+   ========================================================================== */
+.main-menu-wrapper ul.main-menu {
+  width: 120%;
+  margin-top: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .main-menu-wrapper ul.main-menu {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.responsive-layout-tablet .main-menu-wrapper ul.main-menu {
+  width: 140%;
+  margin-top: 15px;
+}
+
+ul.main-menu li {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  padding-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  ul.main-menu li {
+    display: inline-block;
+    width: 100%;
+  }
+  ul.main-menu li:before {
+    display: inline;
+    margin-top: 1px;
+    margin-bottom: 5px;
+  }
+}
+
+ul.main-menu li a.menu-item {
+  padding-bottom: 0;
+  font-size: 110%;
+  font-weight: bold;
+  display: inline;
+}
+
+ul.main-menu li span.link-description {
+  display: block;
+  font-size: small;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 768px) {
+  ul.main-menu li span.link-description {
+    margin-bottom: 5px;
+    color: #fff;
+  }
+}
+
+div.secondary-menu-wrapper {
+  width: 20%;
+  margin-top: 15px;
+}
+div.secondary-menu-wrapper ul.secondary-menu li {
+  padding-bottom: 15px;
+}
+@media only screen and (max-width: 768px) {
+  div.secondary-menu-wrapper ul.secondary-menu li:before {
+    display: inline;
+    margin-top: 1px;
+  }
+}
+div.secondary-menu-wrapper ul.secondary-menu li a.menu-item {
+  display: inline;
+}
+@media only screen and (max-width: 768px) {
+  div.secondary-menu-wrapper {
+    width: 100%;
+    margin-top: 0;
+  }
+}
