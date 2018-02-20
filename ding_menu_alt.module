@@ -40,8 +40,7 @@ function ding_menu_alt_theme_menu_link($vars) {
 
   if (isset($element['#original_link']) && $element['#original_link']['menu_name'] == "main-menu" && isset($element['#localized_options']['attributes']['title'])) {
     $desc = $element['#localized_options']['attributes']['title'];
-    $link = l($element['#title'], $element['#href'], $element['#localized_options']);
-    $link .= '<span class="link-description">' . $desc . '</span>';
+    $link = l($element['#title'] . '<span class="link-description">' . $desc . '</span>', $element['#href'], $element['#localized_options']);
   }
   else {
     $link = l('<span>' . $element['#title'] . '</span>', $element['#href'], $element['#localized_options']);
