@@ -20,6 +20,14 @@
   }
 }
 
+#page .main-menu-wrapper > ul.main-menu > li {
+  padding: 0;
+  margin-right: 40px;
+}
+#page .main-menu-wrapper > ul.main-menu > li a {
+  padding: 30px 0 40px 0;
+}
+
 .responsive-layout-tablet .main-menu-wrapper ul.main-menu {
   width: 140%;
   margin-top: 15px;
